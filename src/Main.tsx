@@ -1,5 +1,5 @@
-import Ballon from "./component/ballon/Ballon";
-import Input from "./component/input/Input";
+import Ballon from "@/component/ballon/Ballon";
+import Input from "@/component/input/Input";
 
 const Main = () => {
   return (
