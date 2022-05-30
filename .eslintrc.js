@@ -42,5 +42,9 @@ module.exports = {
       },
     ],
     'import/no-extraneous-dependencies': 'off',
+    'comma-dangle': 'off',
+    'object-curly-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'react/destructuring-assignment': 'off',
   },
 };
