@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Ballon } from '@/components/ballon';
-import Input from '@/components/input/Input';
+import Input from '@/components/input/InputList';
 import Balloons from './components/balloons/Balloons';
 
 interface messageShape {
@@ -26,9 +25,6 @@ const Main = () => {
   return (
     <>
       <div className="main-area">
-        <Ballon time="오후 2:43" sender="프로도">
-          밥 먹었어?
-        </Ballon>
         <Balloons messages={messages} />
       </div>
       <div className="input-area">
