@@ -1,20 +1,46 @@
+import React, { useState } from 'react';
+
 interface messageShape {
   message: string;
 }
 
 interface propShape {
-  values: string;
-  onChange(): any;
+  onEnter(values: object): any;
 }
 
-const Input = ({ values, onChange }: propShape) => {
-  const a = 'a';
+const InputList = ({ onEnter }: propShape) => {
+  const [values, setValues] = useState({ speaker: '', message: '' });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    key: string
+  ) => {
+    const temp = { ...values, ...{ [key]: e.target.value } };
+    setValues(temp);
+  };
+
+  const onClick = () => {
+    onEnter && onEnter(values);
+  };
   return (
     <div>
-      <input id="message" type="text" />
-      <button type="button">enter</button>
+      <input
+        id="speaker"
+        type="text"
+        value={values.speaker}
+        onChange={(e) => handleChange(e, 'speaker')}
+      />
+      <input
+        id="message"
+        type="text"
+        value={values.message}
+        onChange={(e) => handleChange(e, 'message')}
+      />
+      <button type="button" onClick={onClick}>
+        enter
+      </button>
     </div>
   );
 };
 
-export default Input;
+export default InputList;

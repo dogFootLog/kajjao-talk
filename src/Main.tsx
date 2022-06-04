@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Input from '@/components/input/InputList';
+import InputList from '@/components/input/InputList';
 import Balloons from './components/balloons/Balloons';
 
 interface messageShape {
@@ -19,6 +19,10 @@ const Main = () => {
     setMessages([...messages]);
   };
 
+  const onEnter = (values: object) => {
+    console.log(values);
+  };
+
   useEffect(() => {
     console.log(messages);
   }, [messages]);
@@ -33,6 +37,7 @@ const Main = () => {
           전송
         </button>
       </div>
+      <InputList onEnter={onEnter} />
     </>
   );
 };
