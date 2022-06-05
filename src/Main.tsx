@@ -1,35 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import InputList from '@/components/input/InputList';
 import Balloons from './components/balloons/Balloons';
 
-interface messageShape {
+interface talkShape {
   message: string;
+  sender: string;
 }
 
 const Main = () => {
   const [msgInput, setMsgInput] = useState('');
-  const [messages, setMessages] = useState<messageShape[]>([]);
+  const [talkList, setTalkList] = useState<talkShape[]>([]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMsgInput(e.target.value);
   };
 
   const onBtnClick = () => {
-    messages.push({ message: msgInput });
-    setMessages([...messages]);
+    // messages.push({ message: msgInput });
+    // setMessages([...messages]);
   };
 
-  const onEnter = (values: object) => {
-    console.log(values);
+  const onEnter = (values: talkShape) => {
+    talkList.push({ ...values });
+    setTalkList([...talkList]);
   };
 
-  useEffect(() => {
-    console.log(messages);
-  }, [messages]);
   return (
     <>
       <div className="main-area">
-        <Balloons messages={messages} />
+        <Balloons talkList={talkList} />
       </div>
       <div className="input-area">
         <input type="text" value={msgInput} onChange={handleInputChange} />

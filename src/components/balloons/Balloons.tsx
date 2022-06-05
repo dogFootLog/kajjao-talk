@@ -4,11 +4,7 @@ type ballonProps = {
   children: string;
 };
 
-const Balloon = ({
-  sender = '프로도',
-  time = '오후 3:43',
-  children,
-}: ballonProps) => (
+const Balloon = ({ sender, time, children }: ballonProps) => (
   <div>
     <span>{sender}</span>
     <span>{children}</span>
@@ -16,19 +12,20 @@ const Balloon = ({
   </div>
 );
 
-interface messageShape {
+interface talkListShape {
   message: string;
+  sender: string;
 }
 
-interface msgProptype {
-  messages: messageShape[];
+interface propShape {
+  talkList: talkListShape[];
 }
 
-const Balloons = ({ messages }: msgProptype) => (
+const Balloons = ({ talkList }: propShape) => (
   <>
-    {messages.map((msg, idx) => (
-      <Balloon key={idx} sender="프로도" time="오전 10:17">
-        {msg?.message}
+    {talkList.map((talk, idx) => (
+      <Balloon key={idx} sender={talk.sender} time="오전 10:17">
+        {talk.message}
       </Balloon>
     ))}
   </>

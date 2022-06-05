@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 
-interface messageShape {
-  message: string;
-}
-
 interface propShape {
   onEnter(values: object): any;
 }
 
 const InputList = ({ onEnter }: propShape) => {
-  const [values, setValues] = useState({ speaker: '', message: '' });
+  const [values, setValues] = useState({ sender: '', message: '' });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -25,10 +21,10 @@ const InputList = ({ onEnter }: propShape) => {
   return (
     <div>
       <input
-        id="speaker"
+        id="sender"
         type="text"
-        value={values.speaker}
-        onChange={(e) => handleChange(e, 'speaker')}
+        value={values.sender}
+        onChange={(e) => handleChange(e, 'sender')}
       />
       <input
         id="message"
