@@ -17,6 +17,7 @@ const InputList = ({ onEnter }: propShape) => {
 
   const onClick = () => {
     onEnter && onEnter(values);
+    setValues({ sender: '', message: '' });
   };
   return (
     <div>

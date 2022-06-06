@@ -6,8 +6,8 @@ type ballonProps = {
 
 const Balloon = ({ sender, time, children }: ballonProps) => (
   <div>
-    <span>{sender}</span>
-    <span>{children}</span>
+    <span>{`${sender} - `}</span>
+    <span>{`"${children}" `}</span>
     <span>{time}</span>
   </div>
 );
