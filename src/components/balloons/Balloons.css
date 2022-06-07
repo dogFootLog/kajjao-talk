@@ -1,0 +1,16 @@
+.me {
+  font-size: 24px;
+  background-color: rgb(250, 230, 77);
+  color: black;
+  border-radius: 2rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.other {
+  font-size: 24px;
+  background-color: rgb(58, 58, 60);
+  color: white;
+}

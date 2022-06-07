@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputList from '@/components/input/InputList';
+import './Main.css';
 import Balloons from './components/balloons/Balloons';
 
 interface talkShape {
@@ -29,12 +30,6 @@ const Main = () => {
     <>
       <div className="main-area">
         <Balloons talkList={talkList} />
-      </div>
-      <div className="input-area">
-        <input type="text" value={msgInput} onChange={handleInputChange} />
-        <button type="button" onClick={onBtnClick} value={msgInput}>
-          전송
-        </button>
       </div>
       <InputList onEnter={onEnter} />
     </>

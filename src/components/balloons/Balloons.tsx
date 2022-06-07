@@ -1,3 +1,5 @@
+import './Balloons.css';
+
 type ballonProps = {
   sender: string;
   time?: string;
@@ -7,7 +9,7 @@ type ballonProps = {
 const Balloon = ({ sender, time, children }: ballonProps) => (
   <div>
     <span>{`${sender} - `}</span>
-    <span>{`"${children}" `}</span>
+    <span className={sender === 'me' ? 'me' : 'other'}>{`${children}`}</span>
     <span>{time}</span>
   </div>
 );

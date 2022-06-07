@@ -20,7 +20,7 @@ const InputList = ({ onEnter }: propShape) => {
     setValues({ sender: '', message: '' });
   };
   return (
-    <div>
+    <div className="input-area">
       <input
         id="sender"
         type="text"
