@@ -9,17 +9,7 @@ interface talkShape {
 }
 
 const Main = () => {
-  const [msgInput, setMsgInput] = useState('');
   const [talkList, setTalkList] = useState<talkShape[]>([]);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setMsgInput(e.target.value);
-  };
-
-  const onBtnClick = () => {
-    // messages.push({ message: msgInput });
-    // setMessages([...messages]);
-  };
 
   const onEnter = (values: talkShape) => {
     talkList.push({ ...values });

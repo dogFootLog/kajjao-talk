@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './InputList.css';
 
 interface propShape {
   onEnter(values: object): any;

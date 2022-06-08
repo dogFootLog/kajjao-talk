@@ -7,9 +7,11 @@ type ballonProps = {
 };
 
 const Balloon = ({ sender, time, children }: ballonProps) => (
-  <div>
+  <div className="balloon-wrap">
     <span>{`${sender} - `}</span>
-    <span className={sender === 'me' ? 'me' : 'other'}>{`${children}`}</span>
+    <span className={`balloon-child ${sender === 'me' ? 'me' : 'other'}`}>
+      {children}
+    </span>
     <span>{time}</span>
   </div>
 );

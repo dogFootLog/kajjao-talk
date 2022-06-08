@@ -1,12 +1,20 @@
-.me {
-  font-size: 24px;
-  background-color: rgb(250, 230, 77);
-  color: black;
+.balloon-wrap {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.balloon-child {
   border-radius: 2rem;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+
+.me {
+  font-size: 24px;
+  background-color: rgb(250, 230, 77);
+  color: black;
 }
 
 .other {
