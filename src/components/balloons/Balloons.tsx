@@ -4,11 +4,12 @@ type ballonProps = {
   sender: string;
   time?: string;
   children: string;
+  showSender: boolean;
 };
 
-const Balloon = ({ sender, time, children }: ballonProps) => (
+const Balloon = ({ sender, time, children, showSender }: ballonProps) => (
   <div className="balloon-wrap">
-    <span>{`${sender} - `}</span>
+    {showSender && <span>{`${sender} - `}</span>}
     <span className={`balloon-child ${sender === 'me' ? 'me' : 'other'}`}>
       {children}
     </span>
@@ -28,7 +29,12 @@ interface propShape {
 const Balloons = ({ talkList }: propShape) => (
   <>
     {talkList.map((talk, idx) => (
-      <Balloon key={idx} sender={talk.sender} time="오전 10:17">
+      <Balloon
+        key={idx}
+        showSender={!(idx > 0 && talkList[idx - 1].sender === talk.sender)}
+        sender={talk.sender}
+        time="오전 10:17"
+      >
         {talk.message}
       </Balloon>
     ))}
