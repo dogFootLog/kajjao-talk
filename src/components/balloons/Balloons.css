@@ -1,24 +1,41 @@
 .balloon-wrap {
   padding-top: 8px;
   padding-bottom: 8px;
+  position: relative;
 }
 
 .balloon-child {
-  border-radius: 2rem;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  border-radius: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  max-width: 200px;
+  font-size: 20px;
+}
+
+.span-wrap {
+  display: flex;
+}
+
+.balloon-sender {
+  color: white;
+}
+
+.balloon-time {
+  color: white;
+  right: 10px;
 }
 
 .me {
-  font-size: 24px;
   background-color: rgb(250, 230, 77);
   color: black;
+  position: absolute;
+  right: 15px;
 }
 
 .other {
-  font-size: 24px;
   background-color: rgb(58, 58, 60);
   color: white;
+  margin-left: 10px;
 }

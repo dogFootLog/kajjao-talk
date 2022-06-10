@@ -9,7 +9,10 @@ interface talkShape {
 }
 
 const Main = () => {
-  const [talkList, setTalkList] = useState<talkShape[]>([]);
+  const [talkList, setTalkList] = useState<talkShape[]>([
+    { sender: 'me', message: '배고파배고파배고파' },
+    { sender: '프로도', message: '배고파배고파배고파' },
+  ]);
 
   const onEnter = (values: talkShape) => {
     talkList.push({ ...values });
