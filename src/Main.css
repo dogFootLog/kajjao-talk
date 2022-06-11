@@ -1,4 +1,10 @@
+.container {
+  position: relative;
+}
+
 .main-area {
   background-color: rgb(39, 38, 40);
   height: 100vh;
+  position: absolute;
+  width: 100vw;
 }
