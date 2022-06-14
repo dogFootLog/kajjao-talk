@@ -24,12 +24,14 @@ const InputList = ({ onEnter }: propShape) => {
     <div className="input-area">
       <input
         id="sender"
+        className="sender"
         type="text"
         value={values.sender}
         onChange={(e) => handleChange(e, 'sender')}
       />
       <input
         id="message"
+        className="message"
         type="text"
         value={values.message}
         onChange={(e) => handleChange(e, 'message')}
