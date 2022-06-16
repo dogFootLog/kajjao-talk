@@ -2,9 +2,9 @@
   position: relative;
 }
 
-.main-area {
+.main-wrap {
   background-color: rgb(39, 38, 40);
-  height: 100vh;
+  height: 95vh;
   position: absolute;
   width: 100vw;
 }

@@ -8,8 +8,6 @@ interface propShape {
 const InputList = ({ onEnter }: propShape) => {
   const [values, setValues] = useState({ sender: '', message: '' });
 
-  const inputRef = useRef();
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     key: string
@@ -30,7 +28,6 @@ const InputList = ({ onEnter }: propShape) => {
         type="text"
         value={values.sender}
         onChange={(e) => handleChange(e, 'sender')}
-        ref={inputRef}
       />
       <input
         id="message"
