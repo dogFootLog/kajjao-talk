@@ -21,7 +21,7 @@ const InputList = ({ onEnter }: propShape) => {
     setValues({ sender: '', message: '' });
   };
   return (
-    <div className="input-area">
+    <div className="input-wrap">
       <input
         id="sender"
         className="sender"

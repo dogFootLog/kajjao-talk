@@ -21,10 +21,10 @@ const Main = () => {
 
   return (
     <div className="container">
-      <div className="main-wrap">
+      <div className="balloon-area">
         <Balloons talkList={talkList} />
       </div>
-      <div className="input-wrap">
+      <div className="input-area">
         <InputList onEnter={onEnter} />
       </div>
     </div>
