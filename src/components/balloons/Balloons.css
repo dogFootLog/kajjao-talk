@@ -1,4 +1,41 @@
+.span-wrap-me {
+  display: flex;
+}
+
+.span-wrap-other {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.balloon-child {
+  border-radius: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  max-width: 200px;
+  font-size: 20px;
+  background-color: rgb(250, 230, 77);
+  color: black;
+  right: 15px;
+}
+
 .balloon-wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 0px;
+}
+
+.balloon-time {
+  color: white;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 18px;
+}
+
+/*.balloon-wrapper {
   padding-top: 8px;
   padding-bottom: 8px;
   position: relative;
@@ -18,6 +55,7 @@
 
 .span-wrap {
   display: flex;
+  justify-content: center;
 }
 
 .balloon-comp:nth-child(1) {
@@ -35,6 +73,7 @@
 .balloon-time {
   color: white;
   right: 10px;
+  margin-left: auto;
 }
 
 .me {
@@ -48,4 +87,4 @@
   background-color: rgb(58, 58, 60);
   color: white;
   margin-left: 10px;
-}
+}*/

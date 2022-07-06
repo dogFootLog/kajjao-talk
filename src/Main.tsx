@@ -11,7 +11,7 @@ interface talkShape {
 const Main = () => {
   const [talkList, setTalkList] = useState<talkShape[]>([
     { sender: 'me', message: '배고파배고파배고파' },
-    { sender: '프로도', message: '배고파배고파배고파' },
+    { sender: '분노하는 프로도', message: '배고파배고파배고파' },
   ]);
 
   const onEnter = (values: talkShape) => {
@@ -21,10 +21,10 @@ const Main = () => {
 
   return (
     <div className="container">
-      <div className="balloon-area">
+      <div className="balloon-container">
         <Balloons talkList={talkList} />
       </div>
-      <div className="input-area">
+      <div className="input-container">
         <InputList onEnter={onEnter} />
       </div>
     </div>

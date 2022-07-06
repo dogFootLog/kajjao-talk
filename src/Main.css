@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.balloon-area {
+.balloon-container {
   background-color: rgb(39, 38, 40);
   height: 90vh;
   position: absolute;
