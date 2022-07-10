@@ -1,4 +1,7 @@
-import './Balloons.css';
+import classNames from 'classnames/bind';
+import styles from './Balloons.scss';
+
+const cx = classNames.bind(styles);
 
 type ballonProps = {
   sender: string;
@@ -9,7 +12,10 @@ type ballonProps = {
 
 const Balloon = ({ sender, time, children, showSender }: ballonProps) => (
   <div
-    className={`balloon-wrapper ${sender === 'me' ? 'me-wrap' : 'other-wrap'}`}
+    className={cx(
+      'balloon-wrapper',
+      sender === 'me' ? 'me-wrap' : 'other-wrap'
+    )}
   >
     {showSender && sender !== 'me' && (
       <div className="balloon-sender">{`${sender}`}</div>
