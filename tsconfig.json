@@ -1,23 +1,32 @@
 {
   "extends": "./tsconfig.extend.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "declaration": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "outDir": "build/dist", // 빌드 결과물 폴더
+    "target": "es5", // 빌드 결과물은 es5 방식으로
+    "lib": ["dom", "dom.iterable", "esnext"], // 라이브러리는 dom, dom.iterable, esnext
+    "allowJs": true, // JS 파일도 컴파일 대상
+    "declaration": true, // .d.ts 파일 생성 여부
+    "skipLibCheck": true, // 정의 파일의 타입 확인을 건너뛸지 여부
+    "sourceMap": false, // .map.js 파일도 함께 생성 X
+    "esModuleInterop": true, // module:commonjs일 때, 이 값이 true이면 ES6 모듈 사양을 준수해서 CommonJS 모듈을 가져오게 됨
+    "allowSyntheticDefaultImports": true, // 자동으로 export default인 것처럼 다른 파일에서 Import가 가능하게 함. 타입 확인에만 영향을 줌
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true, // 파일명에 대소문자 구분하지 않아도 되는 기능 사용 여부
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "esnext", // 빌드 결과의 모듈 방식 === esnext (보통 AMD나 CommonJs)
+    "moduleResolution": "node", // 모듈 해석 방식은 node처럼
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "typeRoots": ["./@types", "./node_modules/@types"]
+    "isolatedModules": true, // 각 파일을 분리된 모듈로 트랜스파일 하는지 여부
+    "noEmit": true, // 결과 파일 저장 여부
+    "jsx": "react-jsx", // jsx 구문 사용 가능
+    "typeRoots": ["./@types", "./node_modules/@types"],
+    "rootDir": "src", // 컴파일할 대상들이 들어있는 폴더 (루트폴더)
+    "noImplicitReturns": true, // 제대로 리턴 다 안되면 에러
+    "noImplicitThis": true, // this 표현식에 암시적으로 any로 추론되면
+    "noImplicitAny": true, // 암시적으로 선언됐는데 any로 추론되면
+    "strictNullChecks": false, // null, undefined를 서브 타입으로 사용하지 못하게 함
+    "suppressImplicitAnyIndexErrors": false, // 인덱싱 시그니처가 없는 경우, 인덱스를 사용했을 때
+    "noUnusedLocals": false, // 사용 안하는 로컬 변수가 있으면 에러
   },
   "include": ["src", "@types/*", "craco.config.js"]
 }
