@@ -4,7 +4,7 @@
     "outDir": "build/dist", // 빌드 결과물 폴더
     "target": "es5", // 빌드 결과물은 es5 방식으로
     "lib": ["dom", "dom.iterable", "esnext"], // 라이브러리는 dom, dom.iterable, esnext
-    "allowJs": true, // JS 파일도 컴파일 대상
+    "allowJs": true, // TS 말고 JS도 사용
     "declaration": true, // .d.ts 파일 생성 여부
     "skipLibCheck": true, // 정의 파일의 타입 확인을 건너뛸지 여부
     "sourceMap": false, // .map.js 파일도 함께 생성 X
@@ -20,13 +20,13 @@
     "noEmit": true, // 결과 파일 저장 여부
     "jsx": "react-jsx", // jsx 구문 사용 가능
     "typeRoots": ["./@types", "./node_modules/@types"],
-    "rootDir": "src", // 컴파일할 대상들이 들어있는 폴더 (루트폴더)
+    //"rootDir": "src", // 컴파일할 대상들이 들어있는 폴더 (루트폴더)
     "noImplicitReturns": true, // 제대로 리턴 다 안되면 에러
     "noImplicitThis": true, // this 표현식에 암시적으로 any로 추론되면
     "noImplicitAny": true, // 암시적으로 선언됐는데 any로 추론되면
     "strictNullChecks": false, // null, undefined를 서브 타입으로 사용하지 못하게 함
     "suppressImplicitAnyIndexErrors": false, // 인덱싱 시그니처가 없는 경우, 인덱스를 사용했을 때
-    "noUnusedLocals": false, // 사용 안하는 로컬 변수가 있으면 에러
+    "noUnusedLocals": false // 사용 안하는 로컬 변수가 있으면 에러
   },
   "include": ["src", "@types/*", "craco.config.js"]
 }
