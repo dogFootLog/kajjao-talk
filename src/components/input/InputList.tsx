@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import './InputList.css';
+import React, { useState } from 'react';
+import './InputList.module.scss';
 
 interface propShape {
   onEnter(values: object): any;

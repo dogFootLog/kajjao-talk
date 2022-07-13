@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './Balloons.scss';
+import styles from './Balloons.module.scss';
 
 const cx = classNames.bind(styles);
 

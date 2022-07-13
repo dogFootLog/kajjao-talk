@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InputList from '@/components/input/InputList';
-import './Main.css';
+import './Main.module.scss';
 import Balloons from './components/balloons/Balloons';
 
 interface talkShape {
