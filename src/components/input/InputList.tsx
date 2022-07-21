@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './InputList.module.scss';
 
 interface propShape {
-  onEnter(values: object): any;
+  onEnter(values: any): void;
 }
 
 const InputList = ({ onEnter }: propShape) => {
