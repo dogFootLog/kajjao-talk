@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import InputList from '@/components/input/InputList';
-import './Main.module.scss';
+import styles from './Main.module.scss';
 import Balloons from './components/balloons/Balloons';
 
 interface talkShape {
@@ -20,11 +20,11 @@ const Main = () => {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div className="balloon-container">
         <Balloons talkList={talkList} />
       </div>
-      <div className="input-container">
+      <div className={styles['input-container']}>
         <InputList onEnter={onEnter} />
       </div>
     </div>

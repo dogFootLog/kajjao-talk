@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './InputList.module.scss';
+import styles from './InputList.module.scss';
 
 interface propShape {
   onEnter(values: any): void;
@@ -21,7 +21,7 @@ const InputList = ({ onEnter }: propShape) => {
     setValues({ sender: '', message: '' });
   };
   return (
-    <div className="input-wrap">
+    <div className={styles['input-wrap']}>
       <input
         id="sender"
         className="sender"
