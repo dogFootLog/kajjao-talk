@@ -20,7 +20,9 @@ const Balloon = ({ sender, time, children, showSender }: ballonProps) => (
     {showSender && sender !== 'me' && (
       <div className="balloon-sender">{`${sender}`}</div>
     )}
-    <div className={`${sender === 'me' ? 'span-wrap-me' : 'span-wrap-other'}`}>
+    <div
+      className={styles[sender === 'me' ? 'span-wrap-me' : 'span-wrap-other']}
+    >
       <div className="balloon-time">{time}</div>
       <div className="balloon-child">{children}</div>
     </div>
